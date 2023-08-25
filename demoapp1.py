@@ -19,16 +19,16 @@ def move_command():
 	# master.mav.send(mavutil.mavlink.MAVLink_set_position_target_local_ned_message(0,master.target_system, master.target_component,1,0b0000111111111000,0,0,-10,0,0,0,0,0,0,0,0))
 	# time.sleep(10)
 	print("Reaching vertice one")
-	master.mav.send(mavutil.mavlink.MAVLink_set_position_target_local_ned_message(0,master.target_system, master.target_component,1,0b0000111111111000,0,10,-10,0,0,0,0,0,0,0,0))
+	master.mav.send(mavutil.mavlink.MAVLink_set_position_target_local_ned_message(0,master.target_system, master.target_component,1,0b0000111111111000,0,6.5,-5,0,0,0,0,0,0,0,0))
 	time.sleep(10)
 	print("Reaching vertice two")
-	master.mav.send(mavutil.mavlink.MAVLink_set_position_target_local_ned_message(0,master.target_system, master.target_component,1,0b0000111111111000,10,10,-10,0,0,0,0,0,0,0,0))
+	master.mav.send(mavutil.mavlink.MAVLink_set_position_target_local_ned_message(0,master.target_system, master.target_component,1,0b0000111111111000,6.5,6.5,-5,0,0,0,0,0,0,0,0))
 	time.sleep(10)
 	print("Reaching vertice three")
-	master.mav.send(mavutil.mavlink.MAVLink_set_position_target_local_ned_message(0,master.target_system, master.target_component,1,0b0000111111111000,10,0,-10,0,0,0,0,0,0,0,0))
+	master.mav.send(mavutil.mavlink.MAVLink_set_position_target_local_ned_message(0,master.target_system, master.target_component,1,0b0000111111111000,6.5,0,-5,0,0,0,0,0,0,0,0))
 	time.sleep(10)
 	print("Reaching vertice four")
-	master.mav.send(mavutil.mavlink.MAVLink_set_position_target_local_ned_message(0,master.target_system, master.target_component,1,0b0000111111111000,0,0,-10,0,0,0,0,0,0,0,0))
+	master.mav.send(mavutil.mavlink.MAVLink_set_position_target_local_ned_message(0,master.target_system, master.target_component,1,0b0000111111111000,0,0,-5,0,0,0,0,0,0,0,0))
 
 
 print("Mode guided")
@@ -47,7 +47,7 @@ master.mav.command_long_send(master.target_system,master.target_component, mavut
 
 time.sleep(10)
 print("Taking off")
-master.mav.command_long_send(master.target_system,master.target_component,mavutil.mavlink.MAV_CMD_NAV_TAKEOFF,0,0,0,0,0,0,0,10)
+master.mav.command_long_send(master.target_system,master.target_component,mavutil.mavlink.MAV_CMD_NAV_TAKEOFF,0,0,0,0,0,0,0,5)
 
 time.sleep(10)
 print("Take off done")
